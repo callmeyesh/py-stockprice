@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "py-stockprice"
+version = "0.1.0"
+description = "Python CLI tool for getting stock price"
+authors = ["yeshwanth venkatesh <callmeyesh@gmail.com>"]
+homepage = "https://github.com/callmeyesh/"
+repository = "https://github.com/callmeyesh/"
+documentation = ""
+readme = "README.md"
+
+[tool.poetry.scripts]
+py-stockprice = "py_stockprice.main:app"
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0.0"
+typer = {extras = ["all"], version = "^0.6.1"}
+requests = "^2.28.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+pytest-asyncio = "^0.15.1"
+flake8 = "^3.9.2"
+black = {version = "^22.8.0", allow-prereleases = true}
+isort = "^5.9.3"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
